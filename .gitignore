@@ -40,3 +40,15 @@ testem.log
 # System files
 .DS_Store
 Thumbs.db
+
+# Firebase
+storage.rules
+firebase-debug.log
+firestore.indexes.json
+firestore.rules
+
+# dotenv
+.env
+
+# Tailwind CSS
+tailwind.config.js
