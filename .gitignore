@@ -42,8 +42,6 @@ testem.log
 Thumbs.db
 
 # Firebase
-.firebaserc
-firebase.json
 storage.rules
 firebase-debug.log
 firestore.indexes.json
