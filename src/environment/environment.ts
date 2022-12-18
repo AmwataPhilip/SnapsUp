@@ -1,16 +1,13 @@
-import { config } from 'dotenv';
-
-config();
-
 export const environment = {
   production: false,
+  useEmulators: true,
   firebase: {
-    apiKey: process.env['FIREBASE_API_KEY'],
-    authDomain: process.env['FIREBASE_AUTH_DOMAIN'],
-    projectId: process.env['FIREBASE_PROJECT_ID'],
-    storageBucket: process.env['FIREBASE_STORAGE_BUCKET'],
-    messagingSenderId: process.env['FIREBASE_MESSAGING_SENDER_ID'],
-    appId: process.env['FIREBASE_APP_ID'],
-    measurementId: process.env['FIREBASE_MEASUREMENT_ID'],
+    apiKey: 'AIzaSyAqGk5iye5NLOZWBPM8kyoStXu5OQOEppw',
+    authDomain: 'snaps-up-prod.firebaseapp.com',
+    projectId: 'snaps-up-prod',
+    storageBucket: 'snaps-up-prod.appspot.com',
+    messagingSenderId: '132979306207',
+    appId: '1:132979306207:web:c4cf74fbde10b3e554c36a',
+    measurementId: 'G-8Q5GQ0TPD5',
   },
 };
