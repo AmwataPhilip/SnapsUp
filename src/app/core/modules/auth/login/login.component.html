@@ -1,12 +1,38 @@
-<button
-  class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
-  (click)="signInWithGoogle()"
+<div
+  class="flex flex-col h-screen w-full items-center justify-center text-black"
 >
-  Sign in with Google
-</button>
-<button
-  class="bg-gray-500 hover:bg-gray-700 text-white font-bold py-2 px-4 rounded"
-  (click)="signInAnonymously()"
->
-  Sign in anonymously
-</button>
+  <div>
+    <img
+      src="../../../../../assets/icons/snapsup-logo.svg"
+      width="150"
+      alt="Snaps Up Logo"
+    />
+  </div>
+  <div class="mt-14 text-2xl">
+    <h1>Login</h1>
+  </div>
+  <div class="mt-1 flex flex-col gap-2">
+    <button
+      class="flex flex-inline justify-center items-center rounded-md bg-emerald-400 bg-opacity-50 px-10 py-2 shadow-xl backdrop-blur-md transition-colors duration-300 hover:bg-emerald-600"
+      (click)="signInWithGoogle()"
+    >
+      <img
+        src="../../../../../assets/icons/google-logo-icon.svg"
+        alt="Google Logo Icon"
+        class="mr-1 w-6 object-fill"
+      />
+      <div>Sign in with Google</div>
+    </button>
+    <button
+      class="flex flex-inline justify-center items-center rounded-md bg-emerald-400 bg-opacity-50 px-10 py-2 shadow-xl backdrop-blur-md transition-colors duration-300 hover:bg-emerald-600"
+      (click)="signInAnonymously()"
+    >
+      <img
+        src="../../../../../assets/icons/person_FILL1_wght400_GRAD0_opsz48.svg"
+        alt="User Icon"
+        class="mr-1 w-6 object-fill"
+      />
+      <div>Sign in Anonymously</div>
+    </button>
+  </div>
+</div>
