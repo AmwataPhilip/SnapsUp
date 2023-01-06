@@ -1,4 +1,6 @@
+import { ROUTES } from './../../../consts/routes.consts';
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
 import { AuthService } from 'src/app/core/services/auth.service';
 
 @Component({
@@ -6,13 +8,19 @@ import { AuthService } from 'src/app/core/services/auth.service';
   templateUrl: './login.component.html',
 })
 export class LoginComponent {
-  constructor(private authService: AuthService) {}
+  constructor(private authService: AuthService, private router: Router) {}
 
-  signInWithGoogle() {
-    this.authService.signInWithGoogle();
+  async signInWithGoogle() {
+    await this.authService.signInWithGoogle();
+    this.navigateToHomePage();
   }
 
-  signInAnonymously() {
-    this.authService.signInAnonymously();
+  async signInAnonymously() {
+    await this.authService.signInAnonymously();
+    this.navigateToHomePage();
+  }
+
+  navigateToHomePage() {
+    this.router.navigate([ROUTES.home]);
   }
 }

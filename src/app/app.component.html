@@ -1,1 +1,36 @@
-<router-outlet></router-outlet>
+<nav
+  *ngIf="isLoggedIn()"
+  class="bg-white w-full flex relative justify-between items-center mx-auto px-8 py-4"
+>
+  <div class="inline-flex">
+    <a [routerLink]=""
+      ><img
+        class="h-8"
+        src="../assets/icons/snapsup-logo.svg"
+        alt="SnapsUp Logo"
+      />
+    </a>
+  </div>
+
+  <div class="flex-initial">
+    <div class="flex justify-end items-center relative">
+      <div class="block">
+        <div class="inline relative">
+          <button
+            type="button"
+            class="flex flex-inline justify-center items-center rounded-md bg-emerald-400 bg-opacity-50 px-10 py-2 shadow-xl backdrop-blur-md transition-colors duration-300 hover:bg-emerald-600"
+            (click)="handleLogout()"
+          >
+            <img
+              src="../assets/icons/logout_FILL1_wght400_GRAD0_opsz48.svg"
+              alt="Logout Icon"
+              class="mr-1 w-6 object-fill"
+            />
+            <div>Logout</div>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</nav>
+<router-outlet class="bg-gray-100"></router-outlet>

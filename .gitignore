@@ -52,3 +52,7 @@ firestore.rules
 
 # Tailwind CSS
 tailwind.config.js
+
+.dccache
+*.log
+*.cache
