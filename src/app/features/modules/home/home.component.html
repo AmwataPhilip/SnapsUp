@@ -1,22 +1,37 @@
-<div class="flex w-full flex-wrap text-white">
+<ng-container *ngIf="(handleGetAllImages() | async)?.length; else elseTemplate">
   <div
-    class="hover:cursor-pointer"
-    (click)="handleOpenViewImageModal(image)"
-    *ngFor="let image of handleGetAllImages() | async"
+    class="w-full h-full first:flex flex-col items-center justify-center p-12"
   >
-    <div class="relative w-64 h-fit bg-white">
-      <img
-        class="h-64 w-64 object-cover object-top"
-        src="{{ image.url }}"
-        loading="lazy"
-      />
-      <div
-        class="absolute bottom-0 flex flex-wrap bg-gray-700 bg-opacity-40 w-full p-2"
-      >
-        <div>
-          <span>{{ image.name }}</span>
+    <h1>No Snaps yet . . .</h1>
+    <span>Share your world!</span>
+    <img
+      class="w-96"
+      src="../../../../assets/icons/gallery_thumbnail_FILL1_wght400_GRAD0_opsz48.svg"
+      alt="Photo Gallery Icon"
+    />
+  </div>
+</ng-container>
+<ng-template #elseTemplate>
+  <div class="flex w-full flex-wrap text-white">
+    <div
+      class="hover:cursor-pointer"
+      (click)="handleOpenViewImageModal(image)"
+      *ngFor="let image of handleGetAllImages() | async"
+    >
+      <div class="relative w-64 h-fit bg-white">
+        <img
+          class="h-64 w-64 object-cover object-top"
+          src="{{ image.url }}"
+          loading="lazy"
+        />
+        <div
+          class="absolute bottom-0 flex flex-wrap bg-gray-700 bg-opacity-40 w-full p-2"
+        >
+          <div>
+            <span>{{ image.name }}</span>
+          </div>
         </div>
       </div>
     </div>
   </div>
-</div>
+</ng-template>

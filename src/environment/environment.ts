@@ -1,6 +1,6 @@
 export const environment = {
-  production: false,
-  useEmulators: true,
+  production: true,
+  useEmulators: false,
   firebase: {
     apiKey: 'AIzaSyAqGk5iye5NLOZWBPM8kyoStXu5OQOEppw',
     authDomain: 'snaps-up-prod.firebaseapp.com',
