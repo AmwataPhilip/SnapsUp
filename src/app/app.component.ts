@@ -1,3 +1,4 @@
+import { ModalService } from './core/services/modal.service';
 import { ROUTES } from './core/consts/routes.consts';
 import { Router } from '@angular/router';
 import { AuthService } from './core/services/auth.service';
@@ -9,7 +10,11 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'SnapsUp';
-  constructor(private authService: AuthService, private router: Router) {}
+  constructor(
+    private authService: AuthService,
+    private modalService: ModalService,
+    private router: Router
+  ) {}
 
   isLoggedIn() {
     return this.authService.isLoggedIn;
@@ -18,6 +23,10 @@ export class AppComponent {
   async handleLogout() {
     await this.authService.logout();
     this.navigateToLogin();
+  }
+
+  async handleOpenImageUploadComponent() {
+    this.modalService.openImageUploaderDialog();
   }
 
   navigateToLogin() {

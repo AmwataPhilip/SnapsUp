@@ -1,6 +1,6 @@
 <nav
   *ngIf="isLoggedIn()"
-  class="bg-white w-full flex relative justify-between items-center mx-auto px-8 py-4"
+  class="bg-white w-full flex relative justify-between items-center mx-auto px-4 py-4"
 >
   <div class="inline-flex">
     <a [routerLink]=""
@@ -14,11 +14,25 @@
 
   <div class="flex-initial">
     <div class="flex justify-end items-center relative">
-      <div class="block">
+      <div class="flex flex-row gap-2">
         <div class="inline relative">
           <button
             type="button"
-            class="flex flex-inline justify-center items-center rounded-md bg-emerald-400 bg-opacity-50 px-10 py-2 shadow-xl backdrop-blur-md transition-colors duration-300 hover:bg-emerald-600"
+            class="flex flex-inline justify-center items-center rounded-md bg-emerald-400 bg-opacity-50 px-6 py-2 shadow-xl backdrop-blur-md transition-colors duration-300 hover:bg-emerald-600"
+            (click)="handleOpenImageUploadComponent()"
+          >
+            <img
+              src="../assets/icons/upload_FILL1_wght400_GRAD0_opsz48.svg"
+              alt="Logout Icon"
+              class="mr-1 w-6 object-fill"
+            />
+            <div>Upload</div>
+          </button>
+        </div>
+        <div class="inline relative">
+          <button
+            type="button"
+            class="flex flex-inline justify-center items-center rounded-md bg-emerald-400 bg-opacity-50 px-8 py-2 shadow-xl backdrop-blur-md transition-colors duration-300 hover:bg-emerald-600"
             (click)="handleLogout()"
           >
             <img
