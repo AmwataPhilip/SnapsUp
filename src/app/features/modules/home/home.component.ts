@@ -1,4 +1,4 @@
-import { HomeService } from './../../../core/services/home.service';
+import { GalleryService } from '../../../core/services/gallery.service';
 import { Component } from '@angular/core';
 
 @Component({
@@ -6,9 +6,9 @@ import { Component } from '@angular/core';
   templateUrl: './home.component.html',
 })
 export class HomeComponent {
-  constructor(private homeService: HomeService) {}
+  constructor(private galleryService: GalleryService) {}
 
   handleGetAllImages() {
-    return this.homeService.images$;
+    return this.galleryService.images$;
   }
 }
