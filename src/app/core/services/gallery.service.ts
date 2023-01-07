@@ -17,6 +17,6 @@ export class GalleryService {
 
   async uploadImage(image: Image) {
     const imagesRef = collection(this.firestore, 'Images');
-    await addDoc(imagesRef, image.toFirestoreImage());
+    await addDoc(imagesRef, image.toFirestoreObject());
   }
 }

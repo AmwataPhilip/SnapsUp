@@ -9,9 +9,10 @@ import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { UploadImageComponent } from './features/modules/shared/upload-image/upload-image.component';
 import { FormsModule } from '@angular/forms';
+import { ViewImageComponent } from './features/modules/shared/view-image/view-image.component';
 
 @NgModule({
-  declarations: [AppComponent, UploadImageComponent],
+  declarations: [AppComponent, UploadImageComponent, ViewImageComponent],
   imports: [
     BrowserModule,
     AppRoutingModule,
