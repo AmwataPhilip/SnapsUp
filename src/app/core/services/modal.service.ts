@@ -1,3 +1,5 @@
+import { Image } from './../models/image.model';
+import { ViewImageComponent } from './../../features/modules/shared/view-image/view-image.component';
 import { Injectable } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
 import { UploadImageComponent } from 'src/app/features/modules/shared/upload-image/upload-image.component';
@@ -10,6 +12,10 @@ export class ModalService {
 
   openImageUploaderDialog() {
     this.matDialog.open(UploadImageComponent);
+  }
+
+  openViewImageDialog(image: Image) {
+    this.matDialog.open(ViewImageComponent, { data: image });
   }
 
   closeDialog() {

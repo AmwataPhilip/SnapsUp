@@ -1,7 +1,7 @@
 <div class="flex w-full flex-wrap text-white">
-  <a
-    href="{{ image.url }}"
-    target="_blank"
+  <div
+    class="hover:cursor-pointer"
+    (click)="handleOpenViewImageModal(image)"
     *ngFor="let image of handleGetAllImages() | async"
   >
     <div class="relative w-64 h-fit bg-white">
@@ -17,6 +17,6 @@
           <span>{{ image.name }}</span>
         </div>
       </div>
-    </div></a
-  >
+    </div>
+  </div>
 </div>
